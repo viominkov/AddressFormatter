@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="0" name="de.comp.AddressFormatterTest" time="0.026" errors="0" skipped="0">
+<testsuite tests="8" failures="0" name="de.comp.AddressFormatterTest" time="0.039" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
@@ -59,12 +59,12 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="de.comp.AddressFormatterTest" name="AppTest[Format address &quot;Winterallee 3&quot;]" time="0.02"/>
+  <testcase classname="de.comp.AddressFormatterTest" name="AppTest[Format address &quot;Winterallee 3&quot;]" time="0.034"/>
   <testcase classname="de.comp.AddressFormatterTest" name="AppTest[Format address &quot;Musterstrasse 45&quot;]" time="0.001"/>
   <testcase classname="de.comp.AddressFormatterTest" name="AppTest[Format address &quot;Blaufeldweg 123B&quot;]" time="0.001"/>
-  <testcase classname="de.comp.AddressFormatterTest" name="AppTest[Format address &quot;Am Bächle 23&quot;]" time="0.001"/>
-  <testcase classname="de.comp.AddressFormatterTest" name="AppTest[Format address &quot;Auf der Vogelwiese 23 b&quot;]" time="0.001"/>
+  <testcase classname="de.comp.AddressFormatterTest" name="AppTest[Format address &quot;Am Bächle 23&quot;]" time="0"/>
+  <testcase classname="de.comp.AddressFormatterTest" name="AppTest[Format address &quot;Auf der Vogelwiese 23 b&quot;]" time="0"/>
   <testcase classname="de.comp.AddressFormatterTest" name="AppTest[Format address &quot;4, rue de la revolution&quot;]" time="0.001"/>
-  <testcase classname="de.comp.AddressFormatterTest" name="AppTest[Format address &quot;200 Broadway Av&quot;]" time="0"/>
+  <testcase classname="de.comp.AddressFormatterTest" name="AppTest[Format address &quot;200 Broadway Av&quot;]" time="0.001"/>
   <testcase classname="de.comp.AddressFormatterTest" name="AppTest[Format address &quot;Calle Aduana, 29&quot;]" time="0.001"/>
 </testsuite>

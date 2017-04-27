@@ -72,11 +72,7 @@ public class AddressFormatter {
      * @return
      */
     private HashMap<String, String> parseStringContainingTwoNumbers(String input) {
-        HashMap<String, String> address = new HashMap<>();
-
-        Pattern pattern = Pattern.compile("");
-        Matcher matcher = pattern.matcher(input);
-        return address;
+        throw new RuntimeException("Method not implemented yet.");
     }
 
     /**
