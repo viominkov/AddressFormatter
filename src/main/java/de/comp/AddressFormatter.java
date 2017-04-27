@@ -33,19 +33,70 @@ public class AddressFormatter {
      * @returns a hashmap with 2 elements - street and number
      */
     private HashMap<String, String> splitIntoStreetAndNumber(String input) {
+        // if two different numbers in the string
+        int count = getNumberOfMatchedNumbers(input);
+        if (count!=1 && count!=0){
+            return parseStringContainingTwoNumbers(input);
+        } else {
+            return parseStringContainingOneNumber(input);
+        }
+    }
+
+    /**
+     *
+     * @param input
+     * @return
+     */
+    private HashMap<String, String> parseStringContainingOneNumber(String input) {
         HashMap<String, String> address = new HashMap<>();
 
-        Pattern pattern = Pattern.compile("\\d+");
+        Pattern pattern = Pattern.compile("\\d+(\\s?)[a-zA-Z]?\\b");
         Matcher matcher = pattern.matcher(input);
 
-        int start = 0;
         if (matcher.find()) {
-            start = matcher.start();
+            String s = input.replaceAll(String.valueOf(pattern), "");
+            String street = trimString(s);
+            String number = trimString(matcher.group());
+
+            address.put("Street", street);
+            address.put("Number", number);
+        } else {
+            throw new RuntimeException(String.format("Couldn't match street number in string %s", input));
         }
-
-        address.put("Street", input.substring(0,start-1));
-        address.put("Number", input.substring(start));
-
         return address;
+    }
+
+    /**
+     *
+     * @param input
+     * @return
+     */
+    private HashMap<String, String> parseStringContainingTwoNumbers(String input) {
+        HashMap<String, String> address = new HashMap<>();
+
+        Pattern pattern = Pattern.compile("");
+        Matcher matcher = pattern.matcher(input);
+        return address;
+    }
+
+    /**
+     * find out the count of all numbers
+     * @param string
+     * @return
+     */
+    private int getNumberOfMatchedNumbers(String string) {
+        Pattern pattern_double_numbers = Pattern.compile("\\d+(\\s?)");
+        Matcher matcher_double_numbers = pattern_double_numbers.matcher(string);
+
+        int count = 0;
+        while (matcher_double_numbers.find()){
+            count++;
+        }
+        return count;
+    }
+
+    private String trimString(String string) {
+        string = string.replaceAll("[-,;]", "");
+        return string.trim();
     }
 }

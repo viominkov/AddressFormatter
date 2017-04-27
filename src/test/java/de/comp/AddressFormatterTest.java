@@ -36,7 +36,11 @@ public class AddressFormatterTest {
                 { "Blaufeldweg 123B",           "{“Blaufeldweg”, “123B”}"},
                 { "Am Bächle 23",               "{“Am Bächle”, “23”}"},
                 { "Auf der Vogelwiese 23 b",    "{“Auf der Vogelwiese”, “23 b”}"},
-                });
+                { "4, rue de la revolution",    "{“rue de la revolution”, “4”}"},
+                { "200 Broadway Av",            "{“Broadway Av”, “200”}"},
+                { "Calle Aduana, 29",           "{“Calle Aduana”, “29”}"},
+                { "Calle 39 No 1540",           "{“Calle 39”, “No 1540”}"}
+        });
     }
 
     @Test
